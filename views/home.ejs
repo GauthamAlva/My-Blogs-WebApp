@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p> <%= homeconst %>  </p>
+    <%  theposts.forEach(function(blogi){ %>
+
+        <div>
+            <h1> <%=blogi.title %> </h1>
+            <p> <%=blogi.content.substring(0,100)+"..." %> 
+            <a href="/home/<%=blogi.title %>" >Read More</a>
+           </p>
+               </div>
+
+   <%   })  %>
+       
+       
+
+<%- include("partials/footer"); -%>
